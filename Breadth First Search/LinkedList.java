@@ -1,6 +1,6 @@
 import java.util.*;
 
-public class LinkedList<T>{
+public class LinkedList<T>{						//GENERAL CLASS Linked List
 	
 	private Node head;
 	private Node tail;
