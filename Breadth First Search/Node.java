@@ -1,5 +1,5 @@
 
-public class Node<T>{
+public class Node<T>{					//GENERAL CLASS Node Object used for Linked List
 	
 	public T data;					//hold whatever object to be used as a node
 	public Node prev;
