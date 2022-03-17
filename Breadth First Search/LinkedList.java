@@ -6,15 +6,15 @@ public class LinkedList<T>{
 	private Node tail;
 	private int size = 0;
 	
-	public LinkedList() {//constructor
+	public LinkedList() {						//Default constructor
 		head = tail;
 	}
 	
-	public LinkedList(T data) {//parameterized constructor
+	public LinkedList(T data) {					//parameterized constructor
 		pushFront(data);
 	}
 	
-	public void pushFront(T data) {
+	public void pushFront(T data) {					//Function to place object front of Linked List
 		if(this.head == null) {
 			this.head = new Node(data, null, null);
 			this.tail = this.head;
@@ -28,9 +28,9 @@ public class LinkedList<T>{
 		}
 	}//pushFront()
 	
-	public void pushBack(T data) {
+	public void pushBack(T data) {					//Fucntion to place object to rear of Linked List
 		if(this.tail == null) {
-			pushFront(data);//same thing as pushFront for first Node
+			pushFront(data);				//same thing as pushFront for first Node
 		}
 		else {
 			Node temp = new Node(data, this.tail, null);
@@ -40,11 +40,11 @@ public class LinkedList<T>{
 		}
 	}//pushBack()
 	
-	public int getSize() {
+	public int getSize() {						//Fucntion to return amount of links for this Linked List
 		return size;
 	}
 	
-	public Node peek() {
+	public Node peek() {						//Function to get the head of the Linked List
 		if(head == null)
 			return null;
 		else {
@@ -53,7 +53,7 @@ public class LinkedList<T>{
 		}
 	}
 	
-	public boolean contains(T target) {
+	public boolean contains(T target) {				//Function to locate object in Linked List
 		Node temp = head;
 		while(temp != null) {
 			if(temp.data == target) 
@@ -65,11 +65,11 @@ public class LinkedList<T>{
 		return false;
 	}//END contains()
 	
-	public void displayR() {
+	public void displayR() {					//Helper Function to display contents of Linked List
 		Node temp = this.head;
 		displayR(temp);
 	}
-	private void displayR(Node temp) {
+	private void displayR(Node temp) {				//Recursive function to diplay contents of linked list
 		if(temp != null) {
 			System.out.printf(" --[%2d]", temp.data);
 			displayR(temp.next);
