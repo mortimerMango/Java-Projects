@@ -8,7 +8,7 @@
  *
  */
 public interface HashMap<k, v> {
-	v get(Object key);				//retrieve the object based on the key encryption
+	v get(Object key);			//retrieve the object based on the key encryption
     v put(k key, v value);			//Append new values using a key encryption and value
 
 }
