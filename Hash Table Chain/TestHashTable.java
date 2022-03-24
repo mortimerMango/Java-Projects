@@ -1,6 +1,6 @@
 /**
  * 
- * This is the driver class to test the Hash Table Chain 
+ * This is the driver class file to test the Hash Table Chain 
  * 
  * @author Byron Teran
  *
