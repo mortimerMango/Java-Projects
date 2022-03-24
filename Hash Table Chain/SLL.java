@@ -11,18 +11,14 @@
  */
 public class SLL<k, v> extends Node<k, v> {
 	
-	public Node head;							//Start of the SLL link
-	private static int size = 0;				//Keep track of size of this SLL
+	public Node head;						//Start of the SLL link
+	private static int size = 0;					//Keep track of size of this SLL
 	
 	public void addFirst(k key, v value) {
-		if(head == null) {
-			head = new Node(key, value);		//Make head start of the link
-			//size++;//lets change this 
-		}
-		else {
-			head = new Node(key, value , head);	//Head is not null, add new node to end of head
-			//size++;//lets change this 
-		}
+		if(head == null) 
+			head = new Node(key, value);			//Make head start of the link
+		else 
+			head = new Node(key, value , head);		//Head is not null, add new node to end of head
 		size++;
 	}
 	public int getSize() {
