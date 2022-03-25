@@ -1,9 +1,5 @@
 # Java-Projects <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-plain-wordmark.svg" title="java" alt="java" width="40" height="40"/>
 #### These are various projects utitilizing JAVA
----
-<div>
-  <img src="https://github.com/devicons/devicon/blob/master/icons/java/java-plain-wordmark.svg" title="java" alt="java" width="40" height="40"/>
-</div>
 
 ## Table of Contents
 * [Breadth First Search](#breadth_first_search)
@@ -32,6 +28,7 @@ the validity of the matrix before using the BFS algorithm.
 ```
 Hash Table using the Chain alogrithm. 
 The file TestHashTable.java runs the algorithm.
+
   Files
 * HashMap
 * HashtableChain
