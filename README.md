@@ -6,9 +6,9 @@
 </div>
 
 ## Table of Contents
-* [Breadth First Search](#breadth_first_search)
-* [Hash Table Chain](#hash_table_chain)
-* [Binary Serch Tree](#binary_search_tree)
+* [Breadth First Search](#breadth first search)
+* [Hash Table Chain](#hash table chain)
+* [Binary Serch Tree](#binary search tree)
 * [Palindromes](#palindromes)
 
 ### Breadth First Search
