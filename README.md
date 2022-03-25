@@ -4,7 +4,7 @@
 ## Table of Contents
 * [Breadth First Search](#breadth-first-search)
 * [Hash Table Chain](#hash-table-chain)
-* [Binary Serch Tree](#binary-search-tree)
+* [Binary Search Tree](#binary-search-tree-(bst))
 * [Palindromes](#palindromes)
 
 ### Breadth First Search
