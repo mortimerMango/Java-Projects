@@ -4,7 +4,7 @@
 ## Table of Contents
 * [Breadth First Search](#breadth-first-search)
 * [Hash Table Chain](#hash-table-chain)
-* [Binary Search Tree](#binary-search-tree-(bst))
+* [Binary Search Tree](#binary-search-tree)
 * [Palindromes](#palindromes)
 
 ### Breadth First Search
@@ -37,7 +37,7 @@ The file TestHashTable.java runs the algorithm.
   must be in the same path in order to run 
   TestHashTable
 ```
-### Binary Search Tree (BST)
+### Binary Search Tree
 ```
 Binary Search Tree using left subtree for
 values less than the root and the right sbutree
