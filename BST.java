@@ -25,9 +25,9 @@ public class BST<E extends Comparable<E>> {
 	private static int size = 0;
 		
 	public boolean add(E data) {
-		int size_clone = size;//get original size
+		int size_clone = size;					//get original size
 		root = add(data, root);
-		return !(size_clone == size);//compare original size to new potential size
+		return !(size_clone == size);				//compare original size to new potential size
 		
 	}
 	private Node add(E data, Node r_clone) {
@@ -43,13 +43,13 @@ public class BST<E extends Comparable<E>> {
 			else if(comparison > 0)
 				r_clone.right = add(data, r_clone.right);
 			else 
-				return r_clone;//there was a duplicate, and we're just returning the original node
+				return r_clone;				//there was a duplicate, and we're just returning the original node
 			
-			return r_clone;//return whatever was added or not
+			return r_clone;					//return whatever was added or not
 		}	
 	}
 	
-	public boolean contains(E target) {							//function to check if given value exist in BST return TRUE if found, FALSE otherwise 
+	public boolean contains(E target) {				//function to check if given value exist in BST return TRUE if found, FALSE otherwise 
 		return contains(target, root);
 	}
 	private boolean contains(E target, Node r_clone) {
@@ -72,12 +72,12 @@ public class BST<E extends Comparable<E>> {
 		
 		if(r_clone == null)
 			return null;
-		else if(data.compareTo(r_clone.data) < 0)//go left
+		else if(data.compareTo(r_clone.data) < 0)			//go left
 			r_clone.left = remove(data, r_clone.left);
-		else if (data.compareTo(r_clone.data) > 0)//go right
+		else if (data.compareTo(r_clone.data) > 0)			//go right
 			r_clone.right = remove(data, r_clone.right);
-		else {//we got a match
-			if(r_clone.left != null && r_clone.right != null) {//two children
+		else {								//we got a match
+			if(r_clone.left != null && r_clone.right != null) {	//two children
 				r_clone.data = removeNode(r_clone.right, r_clone);
 				size--;
 				return r_clone;
@@ -86,32 +86,32 @@ public class BST<E extends Comparable<E>> {
 				size--;
 				return null;
 			}
-			else if(r_clone.left != null) {//left child only
+			else if(r_clone.left != null) {				//left child only
 				size--;
 				return r_clone.left;
 			}
-			else{//right child only
+			else{							//right child only
 				size--;
 				return r_clone.right;
 			}
 		}
-		return r_clone;//return subtree 
+		return r_clone;							//return subtree 
 	}
 	
-	private E removeNode(Node temp, Node temp_shadow) {					//helper function to remove node from tree
+	private E removeNode(Node temp, Node temp_shadow) {			//helper function to remove node from tree
 		
 		if(temp.left == null) {
 			E copyData = temp.data;
-			if(temp_shadow.right == temp) {//check if parent node came from the right
+			if(temp_shadow.right == temp) {				//check if parent node came from the right
 				if(temp.right == null)
 					temp_shadow.right = null;
 				else
 					temp_shadow.right = temp.right;
 			}
 			else {
-				if(temp.right == null)//children are null
+				if(temp.right == null)				//children are null
 					temp_shadow.left = null;
-				else //right child is not null
+				else 						//right child is not null
 					temp_shadow.left = temp.right;
 			}
 			return copyData;
@@ -120,7 +120,7 @@ public class BST<E extends Comparable<E>> {
 			return removeNode(temp.left, temp);
 	}
 	
-	public BST<E> getLeftSubtree(){								//Shallow copy of left subtree from Root
+	public BST<E> getLeftSubtree(){						//Shallow copy of left subtree from Root
 		
 		BST<E> copy = new BST<>();
 		if(this.root.left == null)
@@ -133,7 +133,7 @@ public class BST<E extends Comparable<E>> {
 		return copy;
 		
 	}
-	public BST<E> getRightSubtree(){							//shallow copy of right subtree from root
+	public BST<E> getRightSubtree(){					//shallow copy of right subtree from root
 		
 		BST<E> copy = new BST<>();
 		if(this.root.right == null)
@@ -147,7 +147,7 @@ public class BST<E extends Comparable<E>> {
 	
 	}
 	
-	public boolean isLeaf() {								//helper function for getLeft/getRightSubtree()
+	public boolean isLeaf() {						//helper function for getLeft/getRightSubtree()
 		return (root.left == null && root.right == null);
 	}//isLEAF()
 	
@@ -196,7 +196,7 @@ public class BST<E extends Comparable<E>> {
 		}
 	}
 	
-	public void nodeLook() {								//public function to to send reference for - nodeLook()
+	public void nodeLook() {							//public function to to send reference for - nodeLook()
 		Node temp = root;
 		nodeLook(temp);
 	}
@@ -221,8 +221,7 @@ public class BST<E extends Comparable<E>> {
 		}
 	}
 	
-	public int getSize() {									//return current amount of nodes
+	public int getSize() {								//return current amount of nodes
 		return size;
 	}
-	
 }
